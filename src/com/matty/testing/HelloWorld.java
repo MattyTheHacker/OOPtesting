@@ -10,7 +10,7 @@ public class HelloWorld {
         int age = Period.between(dateOfBirth, LocalDate.now()).getYears();
 
         System.out.printf("Hello World! My name is %s", name);
-        System.out.printf("\nMy age is %d", age);
+        System.out.printf("\nI am %d years old", age);
     }
 
     public static void main(String[] args) {
