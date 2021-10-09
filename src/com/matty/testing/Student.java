@@ -23,12 +23,9 @@ public class Student {
     }
 
     public void setNameFromFullName(String fullName){
-        for (int i = 0; i < fullName.length(); i++){
-            if(fullName.charAt(i) == ' '){
-                setForename(fullName.substring(0, i));
-                setSurname(fullName.substring(i+1));
-            }
-        }
+        int lastSpaceIndexInFullName = fullName.lastIndexOf(' ');
+        setForename(fullName.substring(0, lastSpaceIndexInFullName));
+        setSurname(fullName.substring(lastSpaceIndexInFullName + 1));
     }
 
     public String getSurname() {
