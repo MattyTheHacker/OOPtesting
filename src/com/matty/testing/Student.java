@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Random;
 
-public class Student {
+public class Student extends Person {
     private final int id = new Random().nextInt();
     private String forename;
     private String surname;
@@ -22,7 +22,7 @@ public class Student {
         this.forename = forename;
     }
 
-    public void setNameFromFullName(String fullName){
+    public void setNameFromFullName(String fullName) {
         int lastSpaceIndexInFullName = fullName.lastIndexOf(' ');
         setForename(fullName.substring(0, lastSpaceIndexInFullName));
         setSurname(fullName.substring(lastSpaceIndexInFullName + 1));
@@ -44,7 +44,7 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public int getAge(){
+    public int getAge() {
         return Period.between(dateOfBirth, LocalDate.now()).getYears();
     }
 }
