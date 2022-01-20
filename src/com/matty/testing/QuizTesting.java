@@ -1,26 +1,19 @@
 package com.matty.testing;
 
+import java.io.FileInputStream;
+import java.nio.file.Path;
+
 public class QuizTesting {
     public static void main(String[] args) {
         System.out.println("Begin Testing...");
-        int x = 0;
-        int s = 0;
-        int n = 1000;
-        while (x < n){
-            System.out.println("x = " + x);
-            System.out.println("s = " + s);
-            System.out.println("==============");
-            x++;
-            s = s + 2 * x - 1;
-            if (s == x * x){
-                System.out.println("x = " + x);
-                System.out.println("s = " + s);
-                System.out.println("==============");
-            } else {
-                System.out.println("False.");
-                break;
-            }
-        }
+
+        FileInputStream f = new FileInputStream(p);
+
+        Path p = f("C:\\Java\\MyFile.txt");
+        Path p1 = new Path("C:\\Java\\MyFile.txt");
+        Path p2 = getPath(new f("C:\\Java\\MyFile.txt"));
+        Path p3 = f.getPath("C:\\Java\\MyFile.txt");
+
         System.out.println("Done.");
     }
 }
