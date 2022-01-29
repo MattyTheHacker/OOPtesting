@@ -13,6 +13,7 @@ public class MultiThreading {
         }
 
         MyThread t2 = new MyThread();
+        t2.setDaemon(false);
         t2.start();
         System.out.println(t2.isAlive());
     }
