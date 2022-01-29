@@ -1,6 +1,6 @@
 package threads;
 
-public class MultiThreading {
+public class SingleThread {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("[INFO] There are " + Thread.activeCount() + " threads running.");
         System.out.println("[INFO] The current thread is " + Thread.currentThread().getName());
